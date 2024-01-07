@@ -1,1 +1,10 @@
+--Statement to pull the csv information
+SELECT
+    TOP 100 *
+FROM
+    OPENROWSET(
+        BULK 'https://datalakeowgmyf1.dfs.core.windows.net/files/product_data/products.csv',
+        FORMAT = 'CSV',
+        PARSER_VERSION = '2.0'
+    ) AS [result]
 
