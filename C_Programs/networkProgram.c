@@ -1,7 +1,5 @@
 include <stdio.h>
 
-int main(void){
-
 struct addrinfo{
 int                  ai_flags;                //AI_PASSIVE, AI_CANONNAME, etc.
 int                  ai_family;               // AF_INT, AF_INET6, AF_UNSPEC
@@ -76,11 +74,7 @@ inet_ntop(AF_INET6, &(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);
 printf("The address is: %s\n", ip6);
 
 
-
-
-
-
-
+int main(void){
 
 return 0;
 }
