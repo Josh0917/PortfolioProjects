@@ -16,7 +16,8 @@ char printGrid(char row[X][Y], size_t one, size_t two);
 int main(void){
 
 //Variables
-char guess[X][Y];
+int selectOne;
+int selectTwo;
 
 
 char row[X][Y] =
@@ -30,9 +31,19 @@ char row[X][Y] =
 
 printGrid(row, X, Y);
 
-printf("Player One place your ships");
+printf("Player One place your first ships:");
 
-//scanf("",);
+//take two number inputs
+scanf("%d %d",&selectOne,&selectTwo);
+
+row[selectOne][selectTwo] = 'X';
+
+printGrid(row, X, Y);
+
+//printGrid(row,X,Y);
+//printf("%d %d",selectOne,selectTwo);
+
+
 
 return 0;
 }
